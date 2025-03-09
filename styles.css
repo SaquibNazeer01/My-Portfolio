@@ -15,7 +15,7 @@ body {
 
 /* Navigation Bar */
 nav {
-  background-color: #333;
+  background-color: #333; /* Dark background for the navbar */
   color: #fff;
   padding: 1rem 0;
   position: sticky;
@@ -27,7 +27,9 @@ nav .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
 }
 
 nav .logo {
@@ -41,7 +43,7 @@ nav .logo {
 nav .nav-links {
   list-style: none;
   display: flex;
-  gap: 1.5rem;
+  gap: 1.5rem; /* Space between menu items */
   margin: 0;
   padding: 0;
 }
@@ -56,6 +58,23 @@ nav .nav-links a {
 
 nav .nav-links a:hover {
   color: #fff; /* Change color on hover */
+}
+
+/* Responsive Design for Mobile */
+@media (max-width: 768px) {
+  nav .container {
+    flex-direction: column; /* Stack logo and menu vertically */
+    align-items: center; /* Center items */
+  }
+
+  nav .nav-links {
+    gap: 1rem; /* Reduce gap between items */
+    margin-top: 1rem; /* Space between logo and menu */
+  }
+
+  nav .nav-links a {
+    font-size: 1rem; /* Smaller font size for mobile */
+  }
 }
 
 /* Responsive Design for Mobile */
