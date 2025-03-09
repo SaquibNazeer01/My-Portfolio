@@ -23,6 +23,12 @@ nav {
   z-index: 1000;
 }
 
+nav .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 nav .logo {
   font-size: 1.5rem;
   font-weight: 600;
@@ -30,20 +36,56 @@ nav .logo {
   color: #fff;
 }
 
+/* Menu Box */
+nav .menu-box {
+  background-color: #444; /* Different background color for the menu */
+  padding: 0.5rem 1rem; /* Padding inside the box */
+  border-radius: 5px; /* Rounded corners */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+}
+
 nav .nav-links {
   list-style: none;
   display: flex;
   gap: 1.5rem;
+  margin: 0;
+  padding: 0;
 }
 
+/* Menu Items */
 nav .nav-links a {
-  color: #fff;
+  color: #ff6347; /* Professional color (orange-red) */
   text-decoration: none;
-  transition: color 0.3s;
+  font-weight: 600; /* Bold text */
+  font-size: 1.1rem; /* Slightly larger font size */
+  transition: color 0.3s, transform 0.3s;
 }
 
 nav .nav-links a:hover {
-  color: #ff6347;
+  color: #fff; /* Change color on hover */
+  transform: translateY(-2px); /* Slight lift effect on hover */
+}
+
+/* Responsive Design for Mobile */
+@media (max-width: 768px) {
+  nav .container {
+    flex-direction: column; /* Stack logo and menu vertically */
+    align-items: flex-start; /* Align items to the left */
+  }
+
+  nav .menu-box {
+    width: 100%; /* Full width for mobile */
+    margin-top: 1rem; /* Space between logo and menu */
+  }
+
+  nav .nav-links {
+    flex-direction: column; /* Stack menu items vertically */
+    gap: 0.5rem; /* Reduce gap between items */
+  }
+
+  nav .nav-links a {
+    font-size: 1rem; /* Smaller font size for mobile */
+  }
 }
 
 /* Hero Section */
