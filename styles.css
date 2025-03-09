@@ -64,70 +64,18 @@ nav .nav-links a:hover {
 
 /* Responsive Design for Smaller Screens */
 @media (max-width: 768px) {
+  nav .container {
+    flex-direction: row; /* Keep logo and menu in one line */
+    align-items: center; /* Center items */
+    overflow-x: auto; /* Allow horizontal scrolling if needed */
+  }
+
   nav .nav-links {
     gap: 0.5rem; /* Reduce gap between items */
   }
 
   nav .nav-links a {
     font-size: 0.9rem; /* Slightly smaller font size for mobile */
-  }
-}
-
-
-/* Responsive Design for Mobile */
-@media (max-width: 768px) {
-  nav .container {
-    flex-direction: column; /* Stack logo and menu vertically */
-    align-items: center; /* Center items */
-  }
-
-  nav .nav-links {
-    gap: 1rem; /* Reduce gap between items */
-    margin-top: 1rem; /* Space between logo and menu */
-  }
-
-  nav .nav-links a {
-    font-size: 1rem; /* Smaller font size for mobile */
-  }
-}
-
-/* Responsive Design for Mobile */
-@media (max-width: 768px) {
-  nav .container {
-    flex-direction: row; /* Stack logo and menu vertically */
-    align-items: center; /* Center items */
-  }
-
-  nav .nav-links {
-    gap: 1rem; /* Reduce gap between items */
-    flex-wrap: wrap; /* Allow menu items to wrap */
-    justify-content: center; /* Center menu items */
-  }
-
-  nav .nav-links a {
-    font-size: 1rem; /* Smaller font size for mobile */
-  }
-}
-
-/* Responsive Design for Mobile */
-@media (max-width: 768px) {
-  nav .container {
-    flex-direction: column; /* Stack logo and menu vertically */
-    align-items: flex-start; /* Align items to the left */
-  }
-
-  nav .menu-box {
-    width: 100%; /* Full width for mobile */
-    margin-top: 1rem; /* Space between logo and menu */
-  }
-
-  nav .nav-links {
-    flex-direction: column; /* Stack menu items vertically */
-    gap: 0.5rem; /* Reduce gap between items */
-  }
-
-  nav .nav-links a {
-    font-size: 1rem; /* Smaller font size for mobile */
   }
 }
 
