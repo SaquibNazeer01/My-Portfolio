@@ -14,12 +14,21 @@ body {
 }
 /* Navigation Bar */
 nav {
-  background-color: #333;
+  background-color: #333; /* Dark background for the navbar */
   color: #fff;
   padding: 1rem 0;
   position: sticky;
   top: 0;
   z-index: 1000;
+}
+
+nav .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
 }
 
 nav .logo {
@@ -29,20 +38,28 @@ nav .logo {
   color: #fff;
 }
 
+/* Menu Items */
 nav .nav-links {
   list-style: none;
   display: flex;
-  gap: 1.5rem;
+  gap: 1rem; /* Space between menu items */
+  margin: 0;
+  padding: 0;
+  flex-wrap: nowrap; /* Prevent wrapping to the next line */
 }
 
 nav .nav-links a {
-  color: #fff;
+  color: #ff6347; /* Professional color (orange-red) */
   text-decoration: none;
+  font-weight: 600; /* Bold text */
+  font-size: 1rem; /* Adjust font size */
+  white-space: nowrap; /* Prevent text from wrapping */
+  padding: 0.5rem; /* Add padding for better spacing */
   transition: color 0.3s;
 }
 
 nav .nav-links a:hover {
-  color: #ff6347;
+  color: #fff; /* Change color on hover */
 }
 
 /* Responsive Design for Smaller Screens */
