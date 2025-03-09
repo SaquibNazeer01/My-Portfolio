@@ -103,22 +103,46 @@ nav .nav-links a:hover {
 
 .about-content {
   display: flex;
-  align-items: center;
+  flex-direction: column; /* Stack items vertically on mobile */
+  align-items: center; /* Center items horizontally */
   gap: 2rem;
 }
 
-.about-content p {
-  flex: 1;
+.profile-photo {
+  width: 200px; /* Adjust size for mobile */
+  height: 200px; /* Adjust size for mobile */
+  border-radius: 50%; /* Circular profile photo */
+  object-fit: cover; /* Ensure the image fits well */
+  border: 4px solid #6a11cb; /* Add a border */
+}
+
+.about-text {
+  text-align: center; /* Center text on mobile */
+}
+
+.about-text p {
   font-size: 1.1rem;
   line-height: 1.6;
+  margin-bottom: 1rem;
 }
 
-.about-content img {
-  width: 300px;
-  border-radius: 10px;
-  animation: slideInRight 1.5s ease-in-out;
-}
+/* Responsive Design for Larger Screens */
+@media (min-width: 768px) {
+  .about-content {
+    flex-direction: row; /* Side-by-side layout on larger screens */
+    align-items: flex-start; /* Align items to the top */
+    text-align: left; /* Left-align text on larger screens */
+  }
 
+  .profile-photo {
+    width: 300px; /* Larger size for desktop */
+    height: 300px; /* Larger size for desktop */
+  }
+
+  .about-text {
+    text-align: left; /* Left-align text on larger screens */
+  }
+}
 /* Skills Section */
 .skills {
   padding: 4rem 0;
