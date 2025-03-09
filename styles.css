@@ -27,6 +27,7 @@ nav .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap; /* Allow items to wrap on smaller screens */
 }
 
 nav .logo {
@@ -36,14 +37,7 @@ nav .logo {
   color: #fff;
 }
 
-/* Menu Box */
-nav .menu-box {
-  background-color: #444; /* Different background color for the menu */
-  padding: 0.5rem 1rem; /* Padding inside the box */
-  border-radius: 5px; /* Rounded corners */
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Subtle shadow */
-}
-
+/* Menu Items */
 nav .nav-links {
   list-style: none;
   display: flex;
@@ -52,18 +46,34 @@ nav .nav-links {
   padding: 0;
 }
 
-/* Menu Items */
 nav .nav-links a {
   color: #ff6347; /* Professional color (orange-red) */
   text-decoration: none;
   font-weight: 600; /* Bold text */
   font-size: 1.1rem; /* Slightly larger font size */
-  transition: color 0.3s, transform 0.3s;
+  transition: color 0.3s;
 }
 
 nav .nav-links a:hover {
   color: #fff; /* Change color on hover */
-  transform: translateY(-2px); /* Slight lift effect on hover */
+}
+
+/* Responsive Design for Mobile */
+@media (max-width: 768px) {
+  nav .container {
+    flex-direction: column; /* Stack logo and menu vertically */
+    align-items: center; /* Center items */
+  }
+
+  nav .nav-links {
+    gap: 1rem; /* Reduce gap between items */
+    flex-wrap: wrap; /* Allow menu items to wrap */
+    justify-content: center; /* Center menu items */
+  }
+
+  nav .nav-links a {
+    font-size: 1rem; /* Smaller font size for mobile */
+  }
 }
 
 /* Responsive Design for Mobile */
