@@ -37,6 +37,8 @@ nav .logo {
   text-decoration: none;
   color: #fff;
   margin-bottom: 1rem; /* Space between logo and menu */
+  padding-bottom: 0.5rem; /* Space between text and border */
+  border-bottom: 2px solid #ff6347; /* Line below the logo */
 }
 
 /* Menu Items */
